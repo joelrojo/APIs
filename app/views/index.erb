@@ -1,0 +1,11 @@
+<div>
+  <form action="/tweet" method="post" >
+    <textarea name="tweet" placeholder="your tweet text here"></textarea>
+    <input type="submit" value="Tweet it!"><span class="char-count">0</span>
+  </form>
+</div>
+<% if @tweets %>
+  <% @tweets.each do |tweet| %>
+    <p><%= tweet %></p>
+  <% end %>
+<% end %>
